@@ -1,0 +1,60 @@
+import type { News } from "@/types";
+
+export const NEWS: News[] = [
+  {
+    id: "reforma",
+    outlet: "Diario del Sur",
+    headline: "Reforma tributaria: el Gobierno propone que las grandes fortunas paguen más",
+    summary: "Nota de política económica con cifras oficiales y reacciones de la oposición.",
+    values: {
+      politica: { x: -0.62, y: 0.15, c: 0.82, ev: ["las grandes fortunas aportarán una tarifa mayor", "redistribuir para financiar la educación pública"] },
+      proposito: { x: -0.55, y: 0.4, c: 0.88, ev: ["el proyecto será radicado el martes en el Congreso", "voceros de la oposición rechazaron la propuesta"] },
+      registro: { x: 0.18, y: 0.3, c: 0.74, ev: ["según el texto del proyecto", "los gremios advirtieron un posible impacto en la inversión"] },
+      contenido: { x: -0.3, y: -0.7, c: 0.8, ev: ["de acuerdo con cifras del Ministerio de Hacienda", "en los municipios pequeños el recaudo sería menor"] },
+    },
+    temas: [["Economía", 0.55], ["Política", 0.3], ["Sociedad", 0.15]],
+    intencion: [["Informar", 0.65], ["Persuadir", 0.25], ["Alarmar", 0.1]],
+  },
+  {
+    id: "seguridad",
+    outlet: "Alerta Total",
+    headline: "¡Escándalo! Lo que NO quieren que sepas sobre el nuevo plan de seguridad",
+    summary: "Titular de alarma, lenguaje cargado y llamado a compartir.",
+    values: {
+      politica: { x: 0.35, y: 0.72, c: 0.66, ev: ["mano dura es la única salida", "mientras algunos defienden a los delincuentes"] },
+      proposito: { x: 0.3, y: 0.86, c: 0.9, ev: ["¡No vas a creer lo que ocultan!", "comparte antes de que lo borren"] },
+      registro: { x: 0.78, y: 0.82, c: 0.92, ev: ["una amenaza que acecha a tu familia", "nadie está a salvo"] },
+      contenido: { x: 0.7, y: -0.5, c: 0.78, ev: ["creemos que el plan fracasará", "en nuestro barrio ya se siente el miedo"] },
+    },
+    temas: [["Seguridad", 0.6], ["Política", 0.25], ["Sociedad", 0.15]],
+    intencion: [["Alarmar", 0.45], ["Persuadir", 0.35], ["Movilizar", 0.15], ["Informar", 0.05]],
+  },
+  {
+    id: "mundial",
+    outlet: "Crónica Deportiva",
+    headline: "La selección clasifica al Mundial tras una remontada histórica",
+    summary: "Crónica deportiva celebratoria, sin carga política.",
+    values: {
+      politica: { x: 0.02, y: -0.05, c: 0.55, ev: ["el entrenador habló de unidad y trabajo", "sin mensajes políticos relevantes"] },
+      proposito: { x: 0.72, y: -0.2, c: 0.86, ev: ["una noche para no olvidar", "los goles llegaron en los últimos minutos"] },
+      registro: { x: 0.6, y: -0.72, c: 0.84, ev: ["el estadio explotó de alegría", "los hinchas celebraron hasta el amanecer"] },
+      contenido: { x: -0.2, y: 0.12, c: 0.7, ev: ["el marcador final fue 3-2", "el partido se jugó en la capital"] },
+    },
+    temas: [["Deportes", 0.85], ["Sociedad", 0.1], ["Economía", 0.05]],
+    intencion: [["Entretener", 0.6], ["Informar", 0.4]],
+  },
+  {
+    id: "tasas",
+    outlet: "Mercados Hoy",
+    headline: "El banco central mantiene sin cambios la tasa de interés",
+    summary: "Nota técnica y sobria sobre una decisión de política monetaria.",
+    values: {
+      politica: { x: 0.12, y: 0.05, c: 0.5, ev: ["la decisión busca contener la inflación", "sin cambios en la meta de gasto"] },
+      proposito: { x: -0.8, y: -0.5, c: 0.9, ev: ["la junta votó por mayoría", "el comunicado se publicó a las 4 p. m."] },
+      registro: { x: -0.6, y: 0.05, c: 0.85, ev: ["los analistas esperaban esta decisión", "el tono del comunicado fue técnico"] },
+      contenido: { x: -0.75, y: 0.55, c: 0.82, ev: ["la inflación anual cerró en 5,1%", "el mercado global reaccionó con calma"] },
+    },
+    temas: [["Economía", 0.8], ["Política", 0.1], ["Sociedad", 0.1]],
+    intencion: [["Informar", 0.85], ["Persuadir", 0.15]],
+  },
+];
