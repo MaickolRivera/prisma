@@ -1,14 +1,12 @@
 import { lazy, Suspense, useState } from "react";
 import { AnalysisPanel } from "@/components/AnalysisPanel";
 import { SectionHeading } from "@/components/SectionHeading";
-import { LAYERS } from "@/data/layers";
 import { NEWS } from "@/data/news";
 import { cn } from "@/lib/utils";
 import type { LayerId } from "@/types";
+import CompositionGroup from "@/components/CompositionGroup";
 
 const LayerScene = lazy(() => import("@/components/LayerScene").then((m) => ({ default: m.LayerScene })));
-
-const allOn = Object.fromEntries(LAYERS.map((l) => [l.id, true])) as Record<LayerId, boolean>;
 
 export function NewsExplorer() {
   const [newsId, setNewsId] = useState(NEWS[0].id);
@@ -42,24 +40,29 @@ export function NewsExplorer() {
             ))}
           </ul>
 
-          <div className="min-w-0">
-            <h3 className="text-xl font-semibold leading-snug tracking-tight">{news.headline}</h3>
-            <p className="text-sm text-primary/50">{news.summary}</p>
-            <div className="relative mt-4 h-115 overflow-hidden rounded-xl border border-border bg-card sm:h-135">
-              <Suspense fallback={<p className="grid size-full place-items-center text-sm text-muted-foreground">Cargando escena…</p>}>
-                <LayerScene values={news.values} focus={focus} onFocus={setFocus} />
-              </Suspense>
-              <p className="pointer-events-none absolute bottom-3 left-4 text-xs text-muted-foreground">
-                Arrastra para girar | rueda para acercar | toca una flecha para enfocar su capa
-              </p>
-              <p className="pointer-events-none absolute bottom-3 right-4 hidden text-right text-xs text-muted-foreground sm:block">
-                Largo: intensidad | Opacidad: confianza de Laya
-              </p>
+          <div className="min-w-0 flex flex-col gap-5">
+            <div>
+              <h3 className="text-xl font-semibold leading-snug tracking-tight">{news.headline}</h3>
+              <p className="text-sm text-primary/50">{news.summary}</p>
             </div>
 
-            <div className="mt-6">
+            <div className="grid gap-10 rounded-xl border border-border bg-card p-6 sm:grid-cols-2">
+              <CompositionGroup title="Temas" items={news.temas} />
+              <CompositionGroup title="Intención" items={news.intencion} />
+            </div>
+
+            <div className="grid gap-5 md:grid-cols-[400px_minmax(0,1fr)]">
+              <div className="relative h-115 min-w-0 overflow-hidden rounded-xl border border-border bg-card sm:h-135">
+                <Suspense fallback={<p className="grid size-full place-items-center text-sm text-muted-foreground">Cargando escena…</p>}>
+                  <LayerScene values={news.values} focus={focus} onFocus={setFocus} />
+                </Suspense>
+                <p className="pointer-events-none absolute bottom-3 left-4 text-xs text-muted-foreground">
+                  | - Arrastra para girar | - Rueda para acercar | - Toca una flecha para enfocar su capa
+                </p>
+              </div>
               <AnalysisPanel news={news} focus={focus} onFocus={setFocus} />
             </div>
+
           </div>
         </div>
       </div>

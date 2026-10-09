@@ -1,4 +1,3 @@
-import { CompositionGroup } from "@/sections/Categories";
 import { LAYERS } from "@/data/layers";
 import { cn } from "@/lib/utils";
 import type { LayerId, News } from "@/types";
@@ -21,8 +20,8 @@ export function AnalysisPanel({ news, focus, onFocus }: Props) {
   const confidence = Math.round(d.c * 100);
 
   return (
-    <div className="grid gap-6 md:grid-cols-[1.15fr_0.85fr]">
-      <div className="rounded-xl border border-border bg-card p-5">
+    <div className="min-w-0">
+      <div className="h-full rounded-xl border border-border bg-card p-5">
         <div role="tablist" aria-label="Capa a detallar" className="flex flex-wrap gap-1.5">
           {LAYERS.map((l) => (
             <button
@@ -67,14 +66,6 @@ export function AnalysisPanel({ news, focus, onFocus }: Props) {
             </li>
           ))}
         </ul>
-      </div>
-
-      <div className="rounded-xl border border-border bg-card p-5">
-        <h4 className="text-sm font-semibold">Composición</h4>
-        <div className="mt-4 grid gap-6">
-          <CompositionGroup title="Temas" items={news.temas} />
-          <CompositionGroup title="Intención" items={news.intencion} />
-        </div>
       </div>
     </div>
   );
