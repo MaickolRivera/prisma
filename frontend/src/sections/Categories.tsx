@@ -15,50 +15,34 @@ export function Categories() {
       mx-auto max-w-6xl px-4 py-20 sm:px-6 md:py-24 
       flex flex-col gap-10">
         <SectionHeading title="CATEGORÍAS"></SectionHeading>
-        {/*
-          No todo se mide igual. Algunas dimensiones se contrarrestan entre sí y otras se reparten un total. Prisma las muestra de forma distinta.
-        */}
 
-        <div className="mt-5 grid gap-10 lg:grid-cols-[2fr_3fr]">
-          <div className="flex flex-col gap-3">
-            <h3 className="text-xl font-semibold">Porcentajes que suman 100</h3>
-            <p className="text-muted-foreground text-md">
-              El tema y la intención no se oponen: se reparten. Una misma nota puede ser 55% economía, 30% política y 15% sociedad. Por eso no van como flechas sino como barras que siempre completan el total.
-            </p>
-          </div>
-
-          <div className="grid gap-10 rounded-xl border border-border bg-card p-6 sm:grid-cols-2">
-            <CompositionGroup title="Temas" items={sample.temas} />
-            <CompositionGroup title="Intención" items={sample.intencion} />
-          </div>
-        </div>
-
-        <div className="grid gap-10 lg:grid-cols-[2fr_3fr]">
-          <div className="flex flex-col gap-3">
+        <div className="gap-10 flex flex-col">
+          <div className="flex flex-col gap-2">
             <h3 className="text-xl font-semibold">Capas: ejes que se contrarrestan</h3>
             <p className="text-muted-foreground text-md">
-              Cada capa es un plano con dos ejes y un extremo opuesto en cada uno, como izquierda contra derecha o informar contra entretener. Laya da un valor entre -100% y +100% por eje, y la noticia queda como una flecha que sale del centro.
-            </p>
-            <p className="mt-3 text-muted-foreground text-md">
-              Una flecha larga significa una inclinación fuerte. Una flecha corta, una noticia casi neutral en esa capa. Cuanto más transparente se dibuja, menos segura está Laya.
+              Cada capa es un plano con dos ejes y un extremo opuesto en cada uno. Laya da un valor entre -100% y +100% por eje, y la noticia queda como una flecha que sale del centro. Una flecha larga significa una inclinación fuerte. Una flecha corta, una noticia casi neutral en esa capa.
             </p>
           </div>
 
-          <ul className="grid gap-4 sm:grid-cols-2">
+          <ul className="flex flex-row gap-5">
             {LAYERS.map((l) => {
               const v = sample.values[l.id];
               return (
-                <li key={l.id} className="flex gap-4 rounded-xl border border-border bg-card p-4">
-                  <div className="size-24 shrink-0">
-                    <MiniPlane x={v.x} y={v.y} color={l.color} />
-                  </div>
-                  <div className="min-w-0">
-                    <h4 className="flex items-center gap-2 font-semibold tracking-tight">
-                      <span className="size-2.5 rounded-sm" style={{ background: l.color }} aria-hidden="true" />
+                <li key={l.id} className="flex flex-col gap-4 rounded-xl border border-border bg-card py-6 px-7 w-full">
+                  <div className="text-center">
+                    <h4 className="flex flex-row items-center justify-center gap-2 font-semibold tracking-tight">
+                      <span className="size-2 rounded-sm" style={{ background: l.color }} aria-hidden="true" />
                       {l.name}
                     </h4>
-                    <p className="mt-1 text-sm leading-snug text-muted-foreground">{l.description}</p>
-                    <p className="mt-2 text-[13px] leading-snug">
+                    <p className="mt-1 text-xs leading-snug text-muted-foreground">{l.description}</p>
+                  </div>
+
+                  <div className="min-w-0 flex flex-col items-center">
+                    <div className="size-24 shrink-0">
+                      <MiniPlane x={v.x} y={v.y} color={l.color} />
+                    </div>
+                    
+                    <p className="mt-2 text-[13px] leading-snug text-center">
                       {l.x[0]} ↔ {l.x[1]}
                       <br />
                       {l.y[0]} ↔ {l.y[1]}
@@ -70,6 +54,19 @@ export function Categories() {
           </ul>
         </div>
 
+        <div className="grid gap-10 lg:grid-cols-[2fr_3fr]">
+          <div className="flex flex-col justify-center gap-2">
+            <h3 className="text-xl font-semibold">Porcentajes que suman 100</h3>
+            <p className="text-muted-foreground text-md">
+              El tema y la intención no se oponen: se reparten. Una misma nota puede ser 55% economía, 30% política y 15% sociedad. Por eso no van como flechas sino como barras que siempre completan el total.
+            </p>
+          </div>
+
+          <div className="grid gap-10 rounded-xl border border-border bg-card p-6 sm:grid-cols-2">
+            <CompositionGroup title="Temas" items={sample.temas} />
+            <CompositionGroup title="Intención" items={sample.intencion} />
+          </div>
+        </div>
 
       </div>
     </section>
