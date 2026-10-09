@@ -7,26 +7,17 @@ export function Hero() {
   return (
     <section className="relative overflow-hidden border-b border-border">
       <div className="bg-grid absolute inset-0" aria-hidden="true" />
-      <div className="relative mx-auto grid max-w-6xl items-center gap-12 px-4 py-20 sm:px-6 md:py-28 lg:grid-cols-[1.15fr_0.85fr]">
-        <div>
-          <h1 className="text-5xl font-semibold leading-[1.02] tracking-[-0.045em] sm:text-6xl lg:text-7xl">
-            El conocimiento es poder.
+      <div className="
+      relative flex flex-col w-full justify-center 
+      items-center gap-5 px-4 py-20 sm:px-6 md:py-35
+      ">
+        <div className="flex flex-col items-center gap-1">
+          <h2 className="text-sm text-primary/80">
+            El conocimiento es poder
+          </h2>
+          <h1 className="text-7xl font-bold">
+            PRISMA
           </h1>
-          <p className="mt-6 max-w-xl text-lg leading-relaxed text-muted-foreground">
-            Saber qué está pasando es el primer paso. Saber cómo te lo cuentan es el segundo. Prisma separa cada noticia en capas para que veas su postura política, su intención y su tono antes de formarte una opinión.
-          </p>
-          <div className="mt-8 flex flex-wrap items-center gap-3">
-            <a href="#news" className={buttonVariants({ size: "lg" })}>
-              Analizar noticias
-            </a>
-            <a href="#how-it-works" className={cn(buttonVariants({ variant: "outline", size: "lg" }))}>
-              Cómo funciona
-              <ArrowDown />
-            </a>
-          </div>
-          <p className="mt-6 max-w-md text-sm text-muted-foreground">
-            Laya, la IA de Prisma, muestra siempre la evidencia y qué tan segura está. No decide qué es verdad: te enseña cómo está contado.
-          </p>
         </div>
 
         <div className="flex justify-center lg:justify-end">
@@ -34,6 +25,21 @@ export function Hero() {
             <EyeFollower className="w-full" />
           </div>
         </div>
+
+        <p className="max-w-lg text-sm leading-[1.4] text-muted-foreground text-center">
+          Prisma descompone en capas cada noticia para revelar sus matices, desde la postura política hasta su tono. Muestra la evidencia y su nivel de certeza sin imponer una verdad: te enseña exactamente cómo te la están contando.
+        </p>
+
+        <div className="mt-10 flex flex-wrap items-center gap-3">
+          <a href="#news" className={buttonVariants({ size: "lg" })}>
+            Analizar noticias
+          </a>
+          <a href="#how-it-works" className={cn(buttonVariants({ variant: "outline", size: "lg" }))}>
+            Cómo funciona
+            <ArrowDown />
+          </a>
+        </div>
+        
       </div>
     </section>
   );
