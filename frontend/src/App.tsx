@@ -1,14 +1,14 @@
-import { Categories } from "@/components/Categories";
-import { Footer } from "@/components/Footer";
-import { Hero } from "@/components/Hero";
-import { HowItWorks } from "@/components/HowItWorks";
-import { Navbar } from "@/components/Navbar";
-import { NewsExplorer } from "@/components/NewsExplorer";
+import { Categories } from "@/sections/Categories";
+import { Footer } from "@/sections/Footer";
+import { Hero } from "@/sections/Hero";
+import { HowItWorks } from "@/sections/HowItWorks";
+import { Header } from "@/sections/Header";
+import { NewsExplorer } from "@/sections/NewsExplorer";
 
 export default function App() {
   return (
     <>
-      <Navbar />
+      <Header />
       <main>
         <Hero />
         <HowItWorks />

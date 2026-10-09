@@ -1,4 +1,4 @@
-import { CompositionGroup } from "@/components/Categories";
+import { CompositionGroup } from "@/sections/Categories";
 import { LAYERS } from "@/data/layers";
 import { cn } from "@/lib/utils";
 import type { LayerId, News } from "@/types";

@@ -19,7 +19,7 @@ const links = [
 ];
 
 
-export function Navbar() {
+export function Header() {
   return (
     <header className="
     w-screen flex justify-center items-center
