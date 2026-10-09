@@ -31,12 +31,12 @@ export function Hero() {
         </p>
 
         <div className="mt-10 flex flex-wrap items-center gap-3">
-          <a href="#news" className={buttonVariants({ size: "lg" })}>
-            Analizar noticias
-          </a>
           <a href="#how-it-works" className={cn(buttonVariants({ variant: "outline", size: "lg" }))}>
             Cómo funciona
             <ArrowDown />
+          </a>
+          <a href="#news" className={buttonVariants({ size: "lg" })}>
+            Analizar noticias
           </a>
         </div>
         
