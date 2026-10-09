@@ -7,7 +7,6 @@ interface Props {
   values: Record<LayerId, LayerReading>;
   active: Record<LayerId, boolean>;
   focus: LayerId;
-  flat: boolean;
   onFocus: (id: LayerId) => void;
 }
 
@@ -141,7 +140,7 @@ export function LayerScene(props: Props) {
 
     /* --- cámara e interacción --- */
     let theta = 0.75, phi = 1.02, phiT = 1.02, zoom = 1;
-    let spread = 1, spreadT = 1, prevFlat = false;
+    let spread = 1, spreadT = 1;
     let autoRotate = !reduce;
     let dragging = false, moved = 0, lx = 0, ly = 0;
 
@@ -220,11 +219,6 @@ export function LayerScene(props: Props) {
       last = t;
       const k = reduce ? 1 : 1 - Math.exp(-dt * 6);
 
-      if (p.flat !== prevFlat) {
-        prevFlat = p.flat;
-        spreadT = p.flat ? 0.03 : 1;
-        phiT = p.flat ? 0.22 : 1.02;
-      }
       spread += (spreadT - spread) * k;
       phi += (phiT - phi) * k;
       if (autoRotate) theta += dt * 0.12;
