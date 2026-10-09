@@ -7,7 +7,7 @@ const sample = NEWS[0];
 
 export function Categories() {
   return (
-    <section id="categorias" className="border-b border-border">
+    <section id="categories" className="border-b border-border">
       <div className="mx-auto max-w-6xl px-4 py-20 sm:px-6 md:py-24">
         <SectionHeading title="Dos tipos de categorías">
           No todo se mide igual. Algunas dimensiones se contrarrestan entre sí y otras se reparten un total. Prisma las muestra de forma distinta.

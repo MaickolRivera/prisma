@@ -16,10 +16,10 @@ export function Hero() {
             Saber qué está pasando es el primer paso. Saber cómo te lo cuentan es el segundo. Prisma separa cada noticia en capas para que veas su postura política, su intención y su tono antes de formarte una opinión.
           </p>
           <div className="mt-8 flex flex-wrap items-center gap-3">
-            <a href="#noticias" className={buttonVariants({ size: "lg" })}>
+            <a href="#news" className={buttonVariants({ size: "lg" })}>
               Analizar noticias
             </a>
-            <a href="#como-funciona" className={cn(buttonVariants({ variant: "outline", size: "lg" }))}>
+            <a href="#how-it-works" className={cn(buttonVariants({ variant: "outline", size: "lg" }))}>
               Cómo funciona
               <ArrowDown />
             </a>

@@ -13,9 +13,9 @@ function Logo() {
 
 
 const links = [
-  { href: "#como-funciona", label: "Cómo funciona", icon: Workflow },
-  { href: "#categorias", label: "Categorías", icon: Layers },
-  { href: "#noticias", label: "Noticias", icon: Newspaper },
+  { href: "#how-it-works", label: "Cómo funciona", icon: Workflow },
+  { href: "#categories", label: "Categorías", icon: Layers },
+  { href: "#news", label: "Noticias", icon: Newspaper },
 ];
 
 

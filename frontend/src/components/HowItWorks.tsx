@@ -21,7 +21,7 @@ const steps = [
 
 export function HowItWorks() {
   return (
-    <section id="como-funciona" className="border-b border-border">
+    <section id="how-it-works" className="border-b border-border">
       <div className="mx-auto max-w-6xl px-4 py-20 sm:px-6 md:py-24">
         <SectionHeading title="Cómo funciona">
           Una noticia no es solo de qué habla. También importa desde dónde lo cuenta, qué busca provocar en quien la lee y con qué tono. Prisma hace visibles esas cosas.
