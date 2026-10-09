@@ -14,7 +14,9 @@ export function Categories() {
       <div className="
       mx-auto max-w-6xl px-4 py-20 sm:px-6 md:py-24 
       flex flex-col gap-10">
-        <SectionHeading title="CATEGORÍAS"></SectionHeading>
+        <SectionHeading title="CATEGORÍAS">
+          No todo se mide igual
+        </SectionHeading>
 
         <div className="gap-10 flex flex-col">
           <div className="flex flex-col gap-2">

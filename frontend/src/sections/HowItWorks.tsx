@@ -23,9 +23,8 @@ export function HowItWorks() {
   return (
     <section id="how-it-works" className="border-b border-border">
       <div className="mx-auto max-w-6xl px-4 py-20 sm:px-6 md:py-24">
-        <SectionHeading title="Cómo funciona">
-          Una noticia no es solo de qué habla. También importa desde dónde lo cuenta, qué busca provocar en quien la lee y con qué tono. Prisma hace visibles esas cosas.
-        </SectionHeading>
+        <SectionHeading title="¿COMÓ FUNCIONA?">
+          Descubre como se cuentan las noticias</SectionHeading>
 
         <ol className="mt-12 grid overflow-hidden rounded-xl border border-border md:grid-cols-3 md:divide-x divide-y md:divide-y-0 divide-border">
           {steps.map((s, i) => (

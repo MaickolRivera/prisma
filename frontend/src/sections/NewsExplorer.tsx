@@ -25,9 +25,7 @@ export function NewsExplorer() {
   return (
     <section id="news" className="border-b border-border">
       <div className="mx-auto max-w-6xl px-4 py-20 sm:px-6 md:py-24">
-        <SectionHeading title="Noticias">
-          Elige una noticia y mira cómo la descompone Laya. Compara la nota sobria con la alarmista y fíjate en cuánto cambian las flechas. Estos análisis son datos de ejemplo.
-        </SectionHeading>
+        <SectionHeading title="NOTICIAS"></SectionHeading>
 
         <div className="mt-12 grid gap-8 lg:grid-cols-[300px_minmax(0,1fr)]">
           <ul className="grid content-start gap-1" aria-label="Noticias de ejemplo">
