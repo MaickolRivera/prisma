@@ -5,7 +5,6 @@ import type { LayerId, LayerReading } from "@/types";
 
 interface Props {
   values: Record<LayerId, LayerReading>;
-  active: Record<LayerId, boolean>;
   focus: LayerId;
   onFocus: (id: LayerId) => void;
 }
@@ -234,10 +233,8 @@ export function LayerScene(props: Props) {
       LAYERS.forEach((ld, i) => {
         const o = objs[ld.id];
         const target = p.values[ld.id];
-        const isOn = p.active[ld.id];
         const isFocus = p.focus === ld.id;
 
-        o.vis += ((isOn ? 1 : 0) - o.vis) * k;
         o.group.visible = o.vis > 0.01;
         o.group.position.y = ((n - 1) / 2 - i) * SPACING * spread;
 

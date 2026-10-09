@@ -12,14 +12,9 @@ const allOn = Object.fromEntries(LAYERS.map((l) => [l.id, true])) as Record<Laye
 
 export function NewsExplorer() {
   const [newsId, setNewsId] = useState(NEWS[0].id);
-  const [active, setActive] = useState(allOn);
   const [focus, setFocus] = useState<LayerId>("politica");
 
   const news = NEWS.find((n) => n.id === newsId)!;
-
-  function toggle(id: LayerId) {
-    setActive((a) => ({ ...a, [id]: !a[id] }));
-  }
 
   return (
     <section id="news" className="border-b border-border">
@@ -52,7 +47,7 @@ export function NewsExplorer() {
             <p className="text-sm text-primary/50">{news.summary}</p>
             <div className="relative mt-4 h-115 overflow-hidden rounded-xl border border-border bg-card sm:h-135">
               <Suspense fallback={<p className="grid size-full place-items-center text-sm text-muted-foreground">Cargando escena…</p>}>
-                <LayerScene values={news.values} active={active} focus={focus} onFocus={setFocus} />
+                <LayerScene values={news.values} focus={focus} onFocus={setFocus} />
               </Suspense>
               <p className="pointer-events-none absolute bottom-3 left-4 text-xs text-muted-foreground">
                 Arrastra para girar | rueda para acercar | toca una flecha para enfocar su capa
