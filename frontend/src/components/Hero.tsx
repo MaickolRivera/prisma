@@ -30,7 +30,7 @@ export function Hero() {
         </div>
 
         <div className="flex justify-center lg:justify-end">
-          <div className="w-full max-w-md rounded-xl border border-border bg-card p-8 sm:p-10">
+          <div className="w-full max-w-md rounded-xl border border-border bg-card p-8 sm:p-0">
             <EyeFollower className="w-full" />
           </div>
         </div>
