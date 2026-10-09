@@ -9,7 +9,7 @@ export function Hero() {
       <div className="bg-grid absolute inset-0" aria-hidden="true" />
       <div className="
       relative flex flex-col w-full justify-center 
-      items-center gap-5 px-4 py-20 sm:px-6 md:py-35
+      items-center gap-4 px-4 py-20 sm:px-6 md:py-40
       ">
         <div className="flex flex-col items-center gap-1">
           <h2 className="text-sm text-primary/80">
@@ -21,7 +21,7 @@ export function Hero() {
         </div>
 
         <div className="flex justify-center lg:justify-end">
-          <div className="w-full max-w-md rounded-xl border border-border bg-card p-8 sm:p-0">
+          <div className="w-full max-w-md">
             <EyeFollower className="w-full" />
           </div>
         </div>
