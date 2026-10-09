@@ -7,11 +7,11 @@ export const buttonVariants = cva(
       variant: {
         default: "bg-primary text-primary-foreground hover:bg-primary/90",
         outline: "border border-border bg-background hover:bg-accent",
-        ghost: "hover:bg-accent",
+        ghost: "",
       },
       size: {
         default: "h-9 px-4",
-        sm: "h-8 px-3 text-[13px]",
+        sm: "h-8 px-3 text-[12px]",
         lg: "h-11 px-6 text-[15px]",
         icon: "size-9",
       },
