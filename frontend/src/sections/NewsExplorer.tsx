@@ -40,14 +40,14 @@ export function NewsExplorer() {
             ))}
           </ul>
 
-          <div className="min-w-0 flex flex-col gap-5">
+          <div className="min-w-0 flex flex-col gap-10">
             <div>
               <h3 className="text-xl font-semibold leading-snug tracking-tight">{news.headline}</h3>
               <p className="text-sm text-primary/50">{news.summary}</p>
             </div>
 
             <div className="grid gap-5 md:grid-cols-[400px_minmax(0,1fr)]">
-              <div className="relative h-115 min-w-0 overflow-hidden rounded-xl border border-border bg-card">
+              <div className="relative h-110 min-w-0 overflow-hidden rounded-xl border border-border bg-card">
                 <Suspense fallback={<p className="grid size-full place-items-center text-sm text-muted-foreground">Cargando escena…</p>}>
                   <LayerScene values={news.values} focus={focus} onFocus={setFocus} />
                 </Suspense>

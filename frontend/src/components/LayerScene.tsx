@@ -224,7 +224,7 @@ export function LayerScene(props: Props) {
       const aspect = camera.aspect || 1;
       const radius = 9.8 * zoom * (aspect < 1 ? 1 / Math.pow(Math.max(aspect, 0.5), 0.8) : 1);
       camera.position.set(radius * Math.sin(phi) * Math.sin(theta), radius * Math.cos(phi), radius * Math.sin(phi) * Math.cos(theta));
-      camera.lookAt(0, 0, 0);
+      camera.lookAt(0, -0.5, 0);
 
       const n = LAYERS.length;
       const w = wrap.clientWidth, h = wrap.clientHeight;

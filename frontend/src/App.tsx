@@ -11,8 +11,8 @@ export default function App() {
       <Header />
       <main>
         <Hero />
-        <Categories />
         <NewsExplorer />
+        <Categories />
         <HowItWorks />
       </main>
       <Footer />
