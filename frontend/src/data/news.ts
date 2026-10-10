@@ -57,4 +57,32 @@ export const NEWS: News[] = [
     temas: [["Economía", 0.8], ["Política", 0.1], ["Sociedad", 0.1]],
     intencion: [["Informar", 0.85], ["Persuadir", 0.15]],
   },
+  {
+    id: "deportes",
+    outlet: "Juventus",
+    headline: "La Juventus es sancionada por evasion de impuestos",
+    summary: "Nota técnica y reveladora sobre el deporte",
+    values: {
+      politica: { x: 0.02, y: -0.05, c: 0.55, ev: ["el entrenador habló de unidad y trabajo", "sin mensajes políticos relevantes"] },
+      proposito: { x: 0.72, y: -0.2, c: 0.86, ev: ["una noche para no olvidar", "los goles llegaron en los últimos minutos"] },
+      registro: { x: 0.6, y: -0.72, c: 0.84, ev: ["el estadio explotó de alegría", "los hinchas celebraron hasta el amanecer"] },
+      contenido: { x: -0.2, y: 0.12, c: 0.7, ev: ["el marcador final fue 3-2", "el partido se jugó en la capital"] },
+    },
+    temas: [["Deportes", 0.85], ["Sociedad", 0.1], ["Economía", 0.05]],
+    intencion: [["Entretener", 0.6], ["Informar", 0.4]],
+  },
+  {
+  id: "terremoto_panama",
+  outlet: "Diario del Sur",
+  headline: "Fuerte sismo sacude Panamá y enciende las alarmas en zonas costeras",
+  summary: "Nota de actualización sobre el sismo registrado en Panamá, reportes de daños y pronunciamiento de las autoridades de emergencia.",
+  values: {
+    politica: { x: -0.1, y: 0.2, c: 0.78, ev: ["el gobierno nacional activó los protocolos de emergencia", "autoridades locales piden mantener la calma"] },
+    proposito: { x: -0.4, y: 0.5, c: 0.85, ev: ["se evalúan posibles daños en infraestructura clave", "equipos de rescate realizan monitoreos preventivos"] },
+    registro: { x: 0.25, y: 0.4, c: 0.82, ev: ["según el informe del Instituto de Geociencias", "el epicentro se localizó a poca profundidad"] },
+    contenido: { x: -0.15, y: -0.6, c: 0.88, ev: ["de acuerdo con datos preliminares del centro sísmico", "no se han reportado víctimas mortales hasta el momento"] },
+  },
+  temas: [["Desastres Naturales", 0.6], ["Sociedad", 0.25], ["Política", 0.15]],
+  intencion: [["Informar", 0.7], ["Alarmar", 0.2], ["Persuadir", 0.1]],
+  },
 ];
