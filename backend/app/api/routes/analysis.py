@@ -1,7 +1,15 @@
-"""POST /analyze: recibe una noticia y devuelve su análisis por capas.
+from fastapi import APIRouter, Request
+from pydantic import BaseModel
+from app.questions.laya import QUESTIONS
 
-TODO:
-- Recibir un AnalyzeRequest.
-- Llamar al servicio analyzer.
-- Devolver un AnalyzeResponse.
-"""
+router = APIRouter()
+
+class NewsIn(BaseModel):
+    new: str
+    body: str
+
+@router.post("/analysis")
+def analyze(news: NewsIn, request: Request):
+    model = request.app.state.laya
+    result = model.predict(news.model_dump(), QUESTIONS)
+    return result["answers"]

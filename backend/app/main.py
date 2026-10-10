@@ -1,7 +1,7 @@
 from fastapi import FastAPI
 from fastapi.concurrency import asynccontextmanager
 from fastapi.middleware.cors import CORSMiddleware
-from app.api.routes import health
+from app.api.routes import health, analysis
 import laya
 
 @asynccontextmanager
@@ -30,3 +30,4 @@ def read_root():
   return {"mensaje": "CORS configurado correctamente"}
 
 app.include_router(health.router)
+app.include_router(analysis.router)
