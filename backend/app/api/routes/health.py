@@ -1,1 +1,10 @@
-"""GET /health: comprueba que la API está viva y si el modelo ya cargó."""
+from fastapi import APIRouter, Request
+
+router = APIRouter()
+
+@router.get("/health")
+def health_check(request: Request):
+    return {
+        "status": "healthy",
+        "model_loaded": hasattr(request.app.state, "laya")
+    }
