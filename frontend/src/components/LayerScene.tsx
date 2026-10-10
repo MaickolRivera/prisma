@@ -115,7 +115,6 @@ export function LayerScene(props: Props) {
         return el;
       };
       const labels: LabelDef[] = [
-        { pos: [-HALF, -HALF], anchor: [0, -115], el: mk("tag", `<i></i>${ld.name}`), tag: true },
         { pos: [HALF + 0.12, 0], anchor: [0, -50], el: mk("", ld.x[1]), tag: false },
         { pos: [-HALF - 0.12, 0], anchor: [-100, -50], el: mk("", ld.x[0]), tag: false },
         { pos: [0, -HALF - 0.1], anchor: [-50, -110], el: mk("", ld.y[1]), tag: false },
@@ -138,7 +137,7 @@ export function LayerScene(props: Props) {
     scene.add(stackAxis);
 
     /* --- cámara e interacción --- */
-    let theta = 0.75, phi = 1.02, phiT = 1.02, zoom = 1;
+    let theta = 0.75, phi = 1.02, phiT = 1.02, zoom = 1.4;
     let spread = 1, spreadT = 1;
     let autoRotate = !reduce;
     let dragging = false, moved = 0, lx = 0, ly = 0;

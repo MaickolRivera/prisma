@@ -46,21 +46,21 @@ export function NewsExplorer() {
               <p className="text-sm text-primary/50">{news.summary}</p>
             </div>
 
-            <div className="grid gap-10 rounded-xl border border-border bg-card p-6 sm:grid-cols-2">
-              <CompositionGroup title="Temas" items={news.temas} />
-              <CompositionGroup title="Intención" items={news.intencion} />
-            </div>
-
             <div className="grid gap-5 md:grid-cols-[400px_minmax(0,1fr)]">
-              <div className="relative h-115 min-w-0 overflow-hidden rounded-xl border border-border bg-card sm:h-135">
+              <div className="relative h-115 min-w-0 overflow-hidden rounded-xl border border-border bg-card">
                 <Suspense fallback={<p className="grid size-full place-items-center text-sm text-muted-foreground">Cargando escena…</p>}>
                   <LayerScene values={news.values} focus={focus} onFocus={setFocus} />
                 </Suspense>
-                <p className="pointer-events-none absolute bottom-3 left-4 text-xs text-muted-foreground">
+                <p className="pointer-events-none absolute bottom-3 left-4 text-xs text-muted-foreground text-balance">
                   | - Arrastra para girar | - Rueda para acercar | - Toca una flecha para enfocar su capa
                 </p>
               </div>
               <AnalysisPanel news={news} focus={focus} onFocus={setFocus} />
+            </div>
+
+            <div className="grid gap-10 rounded-xl border border-border bg-card p-6 sm:grid-cols-2">
+              <CompositionGroup title="Temas" items={news.temas} />
+              <CompositionGroup title="Intención" items={news.intencion} />
             </div>
 
           </div>
