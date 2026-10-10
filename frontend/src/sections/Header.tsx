@@ -48,7 +48,7 @@ export function Header() {
           {links.map(({ href, label, icon: Icon }) => (
             <a key={href} href={href} className={cn(buttonVariants({ variant: "ghost", size: "sm" }), "text-muted-foreground hover:text-foreground")}>
               <Icon/>
-              <p className="hidden">{label}</p>
+              <p className="hidden md:block">{label}</p>
             </a>
           ))}
 
