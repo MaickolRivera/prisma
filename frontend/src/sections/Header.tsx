@@ -44,11 +44,11 @@ export function Header() {
         
         <span className="w-px h-5 mx-1 bg-ring" aria-hidden="true" /> 
 
-        <nav className="hidden items-center gap-2 md:flex" aria-label="Principal">
+        <nav className="items-center gap-2 md:flex" aria-label="Principal">
           {links.map(({ href, label, icon: Icon }) => (
             <a key={href} href={href} className={cn(buttonVariants({ variant: "ghost", size: "sm" }), "text-muted-foreground hover:text-foreground")}>
-              <Icon />
-              {label}
+              <Icon/>
+              <p className="hidden">{label}</p>
             </a>
           ))}
 

@@ -27,7 +27,7 @@ export function Categories() {
             </p>
           </div>
 
-          <ul className="flex flex-row gap-5">
+          <ul className="flex flex-col md:flex-row gap-5">
             {LAYERS.map((l) => {
               const v = sample.values[l.id];
               return (
@@ -40,7 +40,7 @@ export function Categories() {
                     <p className="mt-1 text-xs leading-snug text-muted-foreground">{l.description}</p>
                   </div>
 
-                  <div className="min-w-0 flex flex-col items-center">
+                  <div className="min-w-0 flex flex-row md:flex-col gap-5 md:gap-0 justify-center items-center">
                     <div className="size-24 shrink-0">
                       <MiniPlane x={v.x} y={v.y} color={l.color} />
                     </div>

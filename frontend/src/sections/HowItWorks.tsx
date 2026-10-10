@@ -9,8 +9,8 @@ const steps = [
   },
   {
     icon: ScanSearch,
-    title: "Laya la lee",
-    text: "Laya es el clasificador de IA de Prisma. Analiza el texto en varias dimensiones y, por cada una, devuelve un puntaje, qué tan segura está y la frase exacta en la que se apoyó.",
+    title: "Laya clasifica",
+    text: "Analiza el texto en varias dimensiones y, por cada una, devuelve un puntaje, qué tan segura está y la frase exacta en la que se apoyó.",
   },
   {
     icon: Layers,
@@ -45,7 +45,7 @@ export function HowItWorks() {
           <div>
             <h3 className="text-lg font-semibold tracking-tight">Qué es Prisma</h3>
             <p className="mt-2 text-[15px] leading-relaxed text-muted-foreground">
-              Una herramienta para leer las noticias con más contexto. Como un prisma que separa la luz blanca en colores, descompone una noticia en sus partes para que puedas compararlas y notar patrones: qué medios empujan siempre hacia el mismo lado, qué temas llegan con miedo y cuáles con esperanza.
+              Una herramienta para leer las noticias con más contexto. Como un prisma que separa la luz blanca en colores, descompone una noticia en sus partes para que puedas compararlas y notar patrones: qué medios empujan siempre hacia el mismo lado y qué temas llegan con miedo.
             </p>
           </div>
           <div>
